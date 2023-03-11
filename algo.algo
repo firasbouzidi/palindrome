@@ -1,0 +1,12 @@
+FUNCTION is_palindrome(str: STRING): BOOLEAN
+BEGIN
+    IF str.length <= 1 THEN
+        RETURN TRUE
+    ELSE
+        IF str.charAt(0) = str.charAt(str.length - 1) THEN
+            RETURN is_palindrome(str.substring(1, str.length - 1))
+        ELSE
+            RETURN FALSE
+        END_IF
+    END_IF
+END
